@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Item Search";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="page-container">
+    <br />
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" type="button" onclick="window.location.href = 'bwstw://startscanner?field=txtBarcode'">
+                <i class="fas fa-barcode"></i> Scan item &nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+        </div>
+        <input type="text" id="txtBarcode" class="form-control" placeholder="Item code" aria-label="Enter item code">
+    </div>
+    <br />
+    <button class="btn btn-lg btn-primary confirm-button" onclick="location.href='@Url.Action("Details", "Item", new { id = 12345 })'" >SEARCH</button>
+</div>
+
+@section scripts {
+    <script>
+        function afterItemBarcodeScan() {
+            var inputBC = document.getElementById('txtBarcode');
+            alert("Scanner result :\r\n" + inputBC.value);
+        }
+
+        Quagga.init({}, {});
+    </script>
+}

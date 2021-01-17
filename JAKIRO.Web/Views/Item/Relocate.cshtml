@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Relocate item #12345";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="page-container">
+    <br />
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" type="button">
+                <i class="fas fa-barcode"></i> Scan location &nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+        </div>
+        <input type="text" class="form-control" placeholder="Location code" aria-label="Enter new location code">
+    </div>
+    <br />
+    <button class="btn btn-lg btn-primary confirm-button" onclick="location.href='@Url.Action("Index", "Home")'">CONFIRM</button>
+</div>

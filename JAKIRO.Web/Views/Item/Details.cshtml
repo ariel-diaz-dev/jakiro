@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Item Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="page-container">
+    <br />
+    <div class="form-group">
+        <label>Item Code</label>
+        <input disabled type="text" class="form-control" placeholder="Item code" value="12345">
+    </div>
+    <div class="form-group">
+        <label>Purchase Order ID</label>
+        <input disabled type="text" class="form-control" placeholder="Purchase Order ID">
+    </div>
+    <div class="form-group">
+        <label>Vendor</label>
+        <input disabled type="text" class="form-control" placeholder="Vendor">
+    </div>
+    <div class="form-group">
+        <label>Date received</label>
+        <input disabled type="date" max="3000-12-31" min="2000-01-01" class="form-control" value="2018-01-01">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea disabled class="form-control" rows="3" placeholder="Please fill in details about this item"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input disabled type="text" class="form-control" placeholder="Location" value="Cart 21">
+    </div>
+    <hr class="actions-hr" />
+    <button class="btn btn-lg btn-primary confirm-button" onclick="location.href='@Url.Action("Relocate", "Item")'">
+        <i class="fa fa-exchange-alt"></i> RELOCATE
+    </button>
+    <button class="btn btn-lg btn-success confirm-button" onclick="location.href='@Url.Action("Relocate", "Item")'">
+        <i class="fa fa-truck"></i> DEPLOY
+    </button>
+    <button class="btn btn-lg btn-danger confirm-button" onclick="location.href='@Url.Action("Relocate", "Item")'">
+        <i class="fa fa-undo"></i> RETURN
+    </button>
+    <button class="btn btn-lg btn-secondary confirm-button" onclick="location.href='@Url.Action("History", "Item")'">
+        <i class="fa fa-history"></i> HISTORY
+    </button>
+</div>

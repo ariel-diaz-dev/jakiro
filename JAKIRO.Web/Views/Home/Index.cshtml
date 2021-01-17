@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="main-button-container">
+    <button type="button" class="btn btn-lg btn-primary" onclick="location.href='@Url.Action("Create", "Item")'">
+        <i class="fas fa-plus"></i> RECEIVE ITEM
+    </button>
+    <button type="button" class="btn btn-lg btn-success" onclick="location.href='@Url.Action("Search", "Item")'">
+        <i class="fas fa-search"></i> SEARCH ITEM
+    </button>
+</div>
+
